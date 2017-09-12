@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<!--[if lte IE 6]><html class="preIE7 preIE8 preIE9"><![endif]-->
+<!--[if IE 7]><html class="preIE8 preIE9"><![endif]-->
+<!--[if IE 8]><html class="preIE9"><![endif]-->
+<!--[if gte IE 9]><!--><html><!--<![endif]-->
+  <head>
+      <meta charset="UTF-8">
+      <script src="https://unpkg.com/vue"></script>
+    <title> Learning Vue</title>
+  <!-- <link rel="stylesheet" href="stylesheet.css" type="text/css"> -->
+  </head>
+  <body>
+      <div id="app">
+          {{message}}
+      </div>
+
+      <div id="app2">
+          <span v-bind:title="message">
+              Hover over me!
+          </span>
+      </div>
+      <div id="app-3">
+          <p v-if="seen">Now I'm visble. </p>
+      </div>
+   <script src="newVue.js"></script>   
+  </body>
+</html>
