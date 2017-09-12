@@ -22,6 +22,14 @@
       <div id="app-3">
           <p v-if="seen">Now I'm visble. </p>
       </div>
+      <div id="app4">
+          <span>This is hidden with 'seen=false'</span>
+          <ol>
+              <li v-if="seen" v-for="todo in todos">
+                  {{todo.text}}
+              </li>
+          </ol>
+      </div>
    <script src="newVue.js"></script>   
   </body>
 </html>
