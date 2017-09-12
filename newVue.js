@@ -29,3 +29,15 @@ var app4 = new Vue({
         seen: false
     }
 })
+
+var app5 = new Vue({
+    el: '#app5',
+    data:{
+        message: 'Reverse me!'
+    },
+    methods:{
+        reverse: function(){
+            this.message = this.message.split('').reverse().join('')
+        }
+    }
+})
