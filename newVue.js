@@ -41,3 +41,10 @@ var app5 = new Vue({
         }
     }
 })
+
+var app6 = new Vue({
+    el: '#app6',
+    data: {
+        message:'Type down under please'
+    }
+})
