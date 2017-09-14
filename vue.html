@@ -11,9 +11,10 @@
   <link rel="stylesheet" href="stylesheet.css" type="text/css">
   </head>
   <body>
-      <h1>
-          Learning Vue!!!
+      <h1 class="h1">
+          Learning <span class="green">V</span><span class="black">u</span><span class="green">e</span>
       </h1>
+      <div id="main">
       <div id="app">
           {{message}}
       </div>
@@ -50,6 +51,17 @@
             </todo-item>
           </ol>
       </div>
+      <div id="app8">
+         <p>
+           Name:  {{ getFullName() }}<br>
+            DOB: {{ DOB.toLocaleDateString()}}<br>
+            {{firstName}} is {{ DOB < ageCutoff ? 'Old' : 'Young' }} at {{new Date().getFullYear() - DOB.getFullYear()}} years old.<br>
+            Years of experience: {{ (yearsOfExperience * 1.765455).toFixed(0)}}
+        </p> 
+        <a v-bind:href="myLink">Click here for my v-bind Link for www.rachamimdabbah.com!</a><br>
+        <button v-on:click="clickAlert($event, 'How do you like this annoying alert?')">Click Here for an annoying alert!!!</button>
+      </div>
+    </div>
    <script src="newVue.js"></script>   
   </body>
 </html>

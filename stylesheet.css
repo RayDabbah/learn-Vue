@@ -3,10 +3,16 @@
     box-sizing: border-box;
 }
 body{
-    padding-top: 5%;
+    /* padding-top: 1%; */
     background-color: #538eca;
 }
-
+.h1{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 4em;
+    text-align: center;
+    color: yellow;
+    margin-bottom: 5%;
+}
 div{
     font-size: 1.2em;
     text-align: center;
@@ -16,4 +22,13 @@ ol{
     width: 10%;
     margin: 0 auto;
     text-align: justify;
+}
+#light-green{
+    color: lightgreen;
+}
+.green{
+    color: green;
+}
+.black{
+    color: #000;
 }

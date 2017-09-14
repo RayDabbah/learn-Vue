@@ -64,3 +64,24 @@ var app7 = new Vue({
         ]
     }
 })
+
+var app8 = new Vue({
+    el: '#app8',
+    data:{
+        firstName: 'Shmerel',
+        lastname: 'Goldstein',
+        DOB: new Date(1969, 10, 13),
+        yearsOfExperience: 20,
+        myLink: 'http://www.rachamimdabbah.com',
+        ageCutoff: new Date(2000)
+    },
+methods:{
+     getFullName: function(){
+       return `${this.firstName}  ${this.lastname}`;
+    },
+    clickAlert: function(e,message){
+        console.log(e)
+        confirm(message)
+    }
+}
+})
