@@ -79,8 +79,8 @@ methods:{
      getFullName: function(){
        return `${this.firstName}  ${this.lastname}`;
     },
-    clickAlert: function(e,message){
-        console.log(e)
+    clickAlert: function(message, check){
+        console.log(check)
         confirm(message)
     }
 }

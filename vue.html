@@ -59,7 +59,7 @@
             Years of experience: {{ (yearsOfExperience * 1.765455).toFixed(0)}}
         </p> 
         <a v-bind:href="myLink">Click here for my v-bind Link for www.rachamimdabbah.com!</a><br>
-        <button v-on:click="clickAlert($event, 'How do you like this annoying alert?')">Click Here for an annoying alert!!!</button>
+        <button v-on:click="clickAlert( 'How do you like this annoying alert?', $event)">Click Here for an annoying alert!!!</button>
       </div>
     </div>
    <script src="newVue.js"></script>   
