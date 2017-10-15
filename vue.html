@@ -59,7 +59,9 @@
             Years of experience: {{ (yearsOfExperience * 1.765455).toFixed(0)}}
         </p> 
         <a v-bind:href="myLink">Click here for my v-bind Link for www.rachamimdabbah.com!</a><br>
-        <button v-on:click="clickAlert( 'How do you like this annoying alert?', $event)">Click Here for an annoying alert!!!</button>
+        <button v-on:click.once="clickAlert( 'How do you like this annoying alert?', $event)">Click Here for an annoying alert!!!</button><br>
+        <a href="http://www.rachamimdabbah.com" v-on:click="clickAlert('This will take you to RachamimDabbah.com.')">Try out this silly link to RachamimDabbah.com!</a><br>
+        <a href="http://www.rachamimdabbah.com" v-on:click.prevent="clickAlert('This will not take you anywhere.')">Try out this non link to RachamimDabbah.com!</a>
       </div>
     </div>
    <script src="newVue.js"></script>   
