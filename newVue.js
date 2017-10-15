@@ -21,10 +21,10 @@ var app3 = new Vue({
 var app4 = new Vue({
     el: '#app4',
     data: {
-        todos:[
-            {text: 'Learn Vue.'},
-            {text: 'Learn Gemarah.'},
-            {text: 'Go to sleep.'}
+        todos: [
+            { text: 'Learn Vue.' },
+            { text: 'Learn Gemarah.' },
+            { text: 'Go to sleep.' }
         ],
         seen: false
     }
@@ -32,11 +32,11 @@ var app4 = new Vue({
 
 var app5 = new Vue({
     el: '#app5',
-    data:{
+    data: {
         message: 'Reverse me!'
     },
-    methods:{
-        reverse: function(){
+    methods: {
+        reverse: function () {
             this.message = this.message.split('').reverse().join('')
         }
     }
@@ -45,29 +45,29 @@ var app5 = new Vue({
 var app6 = new Vue({
     el: '#app6',
     data: {
-        message:'Type down under please'
+        message: 'Type down under please'
     }
 })
 
 Vue.component('todo-item', {
     props: ['todo'],
-    template:'<li>{{todo.text}}</li>'
+    template: '<li>{{todo.text}}</li>'
 })
 
 var app7 = new Vue({
     el: '#app7',
     data: {
         groceryList: [
-            {id: 0, text: 'Vegetables'},
-            {id: 1, text:'onions'},
-            {id: 2, text: 'Food!'}
+            { id: 0, text: 'Vegetables' },
+            { id: 1, text: 'onions' },
+            { id: 2, text: 'Food!' }
         ]
     }
 })
 
 var app8 = new Vue({
     el: '#app8',
-    data:{
+    data: {
         firstName: 'Shmerel',
         lastname: 'Goldstein',
         DOB: new Date(1969, 10, 13),
@@ -75,22 +75,34 @@ var app8 = new Vue({
         myLink: 'http://www.rachamimdabbah.com',
         ageCutoff: new Date(2000)
     },
-methods:{
-     getFullName: function(){
-       return `${this.firstName}  ${this.lastname}`;
-    },
-    clickAlert: function(message, check){
-        console.log(check)
-        confirm(message)
+    methods: {
+        getFullName: function () {
+            return `${this.firstName}  ${this.lastname}`;
+        },
+        clickAlert: function (message, check) {
+            console.log(check)
+            confirm(message)
+        }
     }
-}
 })
 
 var app9 = new Vue({
     el: '#app9',
-    methods:{
-        inputSomething: function(e){
+    methods: {
+        inputSomething: function (e) {
             alert(`You have pressed ${e.keyCode || e.which}!!`);
+        }
     }
+})
+
+var exercise1 = new Vue({
+    el: "#exercise1",
+    data:{
+        output: 'Hello!'
+    },
+    methods: {
+        outputSomething: function (e) {
+         this.output = e.target.value;
+        }
     }
 })
