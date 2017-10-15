@@ -95,6 +95,13 @@ var app9 = new Vue({
     }
 })
 
+var app10 = new Vue({
+    el: '#app10',
+    data:{
+        numbers: 36
+    }
+})
+
 var exercise1 = new Vue({
     el: "#exercise1",
     data:{
