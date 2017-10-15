@@ -90,7 +90,7 @@ var app9 = new Vue({
     el: '#app9',
     methods:{
         inputSomething: function(e){
-            alert(`You have pressed ${e.keyCode}!!`);
+            alert(`You have pressed ${e.keyCode || e.which}!!`);
     }
     }
 })
