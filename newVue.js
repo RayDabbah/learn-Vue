@@ -98,7 +98,8 @@ var app9 = new Vue({
 var exercise1 = new Vue({
     el: "#exercise1",
     data:{
-        output: 'Hello!'
+        output: 'Hello!',
+        output2: ''
     },
     methods: {
         outputSomething: function (e) {

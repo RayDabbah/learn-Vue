@@ -72,11 +72,12 @@
       </div>
       <div id="exercise1">
           <p>This is for the exercise.</p>
-          <form action="https://www.google.com" method="GET">
-          <input v-on:keyup="outputSomething" type="text">
-          <input v-on:keyup.ctrl.enter="outputSomething" type="text">
-          <p>{{ output }}</p>
-          <input v-on:click.prevent="onSubmit" type="submit">
+          <form action="https://www.google.com" v-on:submit.prevent method="GET">
+            <input v-on:keyup="outputSomething" type="text">
+            <p>{{ output }}</p>
+          <input v-on:keyup.ctrl.enter="output2 = $event.target.value" type="text">
+          <p>{{ output2 }}</p>
+          <input type="submit">
         </form>
       </div>
 
