@@ -97,41 +97,50 @@ var app9 = new Vue({
 
 var app10 = new Vue({
     el: '#app10',
-    data:{
+    data: {
         numbers: 36
     }
 })
 
 var app11 = new Vue({
-    el:'#app11',
-    data:{
+    el: '#app11',
+    data: {
         inventory: 25
     }
 })
 
 var app12 = new Vue({
     el: '#app12',
-    data:{
+    data: {
         name: 'Pinchos Dorfman'
     }
 })
 
 var app13 = new Vue({
     el: '#app13',
-    data:{
+    data: {
         isAMagician: true,
     }
 })
+setTimeout(function () {
+    var app14 = new Vue({
+        el: '#app14',
+        data: {
+            cloak: 'Seeing how cloak works...'
+        }
+    })
+}, 4000
+);
 
 var exercise1 = new Vue({
     el: "#exercise1",
-    data:{
+    data: {
         output: 'Hello!',
         output2: ''
     },
     methods: {
         outputSomething: function (e) {
-         this.output = e.target.value;
+            this.output = e.target.value;
         }
     }
 })

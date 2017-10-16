@@ -37,3 +37,6 @@ ol{
     width: 48%;
     margin:5px;
 }
+[v-cloak]{
+    display: none;
+}
