@@ -134,18 +134,18 @@ setTimeout(function () {
 
 var app15 = new Vue({
     el: '#app15',
-    data:{
-       people: [
-            {name: 'Gershon', occupation: 'Accountant', company: 'The other one'},
-            {name: 'Moshe', occupation: 'Garbage Man', company: 'Gloabl Enviromental'},
-            {name: 'Freddie', occupation: 'Waiter', company: 'The Mushroomery'},
-            {name: 'George', occupation: 'Sanitational Engineer', company: 'Garry\'s Garbage'},
+    data: {
+        people: [
+            { name: 'Gershon', occupation: 'Accountant', company: 'The other one' },
+            { name: 'Moshe', occupation: 'Garbage Man', company: 'Gloabl Enviromental' },
+            { name: 'Freddie', occupation: 'Waiter', company: 'The Mushroomery' },
+            { name: 'George', occupation: 'Sanitational Engineer', company: 'Garry\'s Garbage' },
         ]
     }
 })
 var app16 = new Vue({
     el: '#app16',
-    data:{
+    data: {
         person: {
             name: 'Yankel',
             lastname: 'Pfefermeister',
