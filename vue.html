@@ -61,8 +61,7 @@
                 Name: {{ getFullName() }}
                 <br> DOB: {{ DOB.toLocaleDateString()}}
                 <br> {{firstName}} is {{ DOB
-                < ageCutoff ? 'Old' : 'Young' }} at {{new Date().getFullYear() - DOB.getFullYear()}}
-                    years old.<br>
+                < ageCutoff ? 'Old' : 'Young' }} at {{new Date().getFullYear() - DOB.getFullYear()}} years old.<br>
                     Years of experience: {{ (yearsOfExperience * 1.765455).toFixed(0)}}
             </p>
             <a v-bind:href="myLink">Click here for my v-bind Link for www.rachamimdabbah.com!</a>
@@ -110,6 +109,11 @@
         <div id="app12">
             <h2 v-once>{{ name }}</h2>
             <button v-on:click="name = 'Yankel Shmerel'">Click to see the name stay the same!</button>
+        </div>
+        <div id="app13">
+            <p v-show="isAMagician">I am a magician and can't be seen.</p>
+            <p v-show="!isAMagician">I am now visible!</p>
+            <button v-on:click="isAMagician = !isAMagician">Click to change my כוחות!</button>
         </div>
     </div>
     <script src="newVue.js"></script>

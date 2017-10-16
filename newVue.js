@@ -116,6 +116,13 @@ var app12 = new Vue({
     }
 })
 
+var app13 = new Vue({
+    el: '#app13',
+    data:{
+        isAMagician: true,
+    }
+})
+
 var exercise1 = new Vue({
     el: "#exercise1",
     data:{
