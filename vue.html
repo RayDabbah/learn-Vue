@@ -139,6 +139,13 @@
                 </tbody>
             </table>
         </div>
+        <div id="app16">
+            <ul>
+                <li v-for="(val, att, i) in person">
+                    {{ i }}: <strong>{{ att }} -</strong>  {{ val }}
+                </li>
+            </ul>
+        </div>
     </div>
     <script src="newVue.js"></script>
 </body>

@@ -143,6 +143,19 @@ var app15 = new Vue({
         ]
     }
 })
+var app16 = new Vue({
+    el: '#app16',
+    data:{
+        person: {
+            name: 'Yankel',
+            lastname: 'Pfefermeister',
+            age: '12',
+            favFood: 'Pizza',
+            favSport: 'Gaga',
+            glasses: true
+        }
+    }
+})
 
 var exercise1 = new Vue({
     el: "#exercise1",
