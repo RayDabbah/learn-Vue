@@ -102,6 +102,13 @@ var app10 = new Vue({
     }
 })
 
+var app11 = new Vue({
+    el:'#app11',
+    data:{
+        inventory: 25
+    }
+})
+
 var exercise1 = new Vue({
     el: "#exercise1",
     data:{
