@@ -109,6 +109,13 @@ var app11 = new Vue({
     }
 })
 
+var app12 = new Vue({
+    el: '#app12',
+    data:{
+        name: 'Pinchos Dorfman'
+    }
+})
+
 var exercise1 = new Vue({
     el: "#exercise1",
     data:{
