@@ -120,6 +120,25 @@
         <div id="app14">
             <p v-cloak>{{ cloak }}</p>
         </div>
+        <div id="app15">
+            <h2>Iterating over objects!</h2>
+            <table border="1">
+                <thead>
+                    <td>-</td>
+                    <td>Name</td>
+                    <td>Occupation</td>
+                    <td>Company</td>
+                </thead>
+                <tbody>
+                    <tr v-for="(person, i) in people">
+                        <td>{{ i + 1 }}</td>
+                        <td>{{ person.name }}</td>
+                        <td>{{ person.occupation }}</td>
+                        <td>{{ person.company }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </div>
     <script src="newVue.js"></script>
 </body>
