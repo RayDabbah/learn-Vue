@@ -32,3 +32,8 @@ ol{
 .black{
     color: #000;
 }
+.main{
+    display: inline-block;
+    width: 48%;
+    margin:5px;
+}
