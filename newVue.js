@@ -192,3 +192,15 @@ var exercise1 = new Vue({
         }
     }
 })
+
+var exercise2 = new Vue({
+    el: '#exercise2',
+    data:{ 
+        password: '',
+        categories:[
+            {name: 'Javascript', sub: ['Vuejs', 'React', 'Angular']},
+            {name: 'Databases', sub: ['MySQL', 'PosrgresSQL', 'MariaDb']},
+            {name: 'OS', sub: ['Linux', 'MacOS', 'Windows']},
+        ],
+    }
+})

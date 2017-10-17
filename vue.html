@@ -159,6 +159,25 @@
             <button v-on:click="shuffle">Click to add people</button>
             <button v-on:click="add">Click to add William</button>
         </div>
+        <div id="exercise2">
+            <p>{{ password }}</p>
+            <input type="password" v-model="password">
+            <template>
+                <p v-if="password.length > 8">You have a super password.</p>
+                <p v-else-if="password.length > 0">You need at least 8 characters in your password.</p>
+                <p v-else>Please enter a password.</p>
+            </template>
+            <ul>
+                <li v-for="category in categories">
+                    {{ category.name }}
+                    <ol>
+                        <li v-for="subcat in category.sub">
+                            {{ subcat }}
+                        </li>
+                    </ol>
+                </li>
+            </ul>
+        </div>
     </div>
     <script src="newVue.js"></script>
 </body>
