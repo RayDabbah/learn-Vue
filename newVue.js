@@ -172,6 +172,10 @@ var app17 = new Vue({
     methods:{
         shuffle: function(){
             this.people.unshift({ id: 8, name: 'Harry' },{ id: 9, name: 'Kyle' },{ id: 10, name: 'Peter' });
+        },
+        add: function(){
+            Vue.set(this.people, 0, { id: 0, name: 'William'});
+            console.log(this.people[0]);
         }
     }
 })
