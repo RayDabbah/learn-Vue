@@ -157,6 +157,24 @@ var app16 = new Vue({
     }
 })
 
+var app17 = new Vue({
+    el: '#app17',
+    data:{
+        people: [
+            {id: 1, name: 'George'},
+            {id: 2, name: 'Frank'},
+            {id: 3, name: 'Jakey'},
+            {id: 4, name: 'Greg'},
+            {id: 5, name: 'Dave'},
+            {id: 6, name: 'Rob'}
+        ]
+    },
+    methods:{
+        shuffle: function(){
+            this.people.unshift({ id: 8, name: 'Harry' },{ id: 9, name: 'Kyle' },{ id: 10, name: 'Peter' });
+        }
+    }
+})
 var exercise1 = new Vue({
     el: "#exercise1",
     data: {

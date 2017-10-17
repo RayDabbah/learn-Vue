@@ -152,6 +152,14 @@
                 </li>
             </ul>
         </div>
+        <div id="app17">
+            <ul>
+                <li v-for="person in people" v-bind:key="person.id">
+                    ID: {{ person.id }} Name: {{ person.name }} <input type="text">
+                </li>
+            </ul>
+            <button v-on:click="shuffle">Click to add people</button>
+        </div>
     </div>
     <script src="newVue.js"></script>
 </body>
