@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+
+    <div id="app">
+        <p>{{ counter }}</p>
+        <p>{{ fullName }}</p>
+        <p>{{ fullName }}</p>
+
+        <button v-on:click="counter++">Increase Counter</button>
+        <button v-on:click="changeName">Change Name</button>
+    </div>
+<script>
+    new Vue({
+  el: '#app',
+  data: {
+    counter: 1,
+    firstName: 'Bo',
+    lastName: 'Andersen'
+  },
+  methods: {
+    changeName: function() {
+      this.firstName = 'Mark';
+      this.lastName = 'Gonzales';
+    }
+  },
+  computed: {
+    fullName: function() {
+      alert("Assembling full name...");
+      return this.firstName + ' ' + this.lastName;
+    }
+  }
+});
+
+</script>
+</body>
+
+</html>
