@@ -18,30 +18,43 @@
 
         <button v-on:click="counter++">Increase Counter</button>
         <button v-on:click="changeName">Change Name</button>
+        <button v-on:click="resetName">Setter Name</button>
     </div>
-<script>
-    new Vue({
-  el: '#app',
-  data: {
-    counter: 1,
-    firstName: 'Bo',
-    lastName: 'Andersen'
-  },
-  methods: {
-    changeName: function() {
-      this.firstName = 'Mark';
-      this.lastName = 'Gonzales';
-    }
-  },
-  computed: {
-    fullName: function() {
-      alert("Assembling full name...");
-      return this.firstName + ' ' + this.lastName;
-    }
-  }
-});
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                counter: 1,
+                firstName: 'Bo',
+                lastName: 'Andersen'
+            },
+            methods: {
+                changeName: function () {
+                    this.firstName = 'Mark';
+                    this.lastName = 'Gonzales';
+                },
+                resetName: function () {
+                    // Once you change 'fullname' Vue goes to computed and uses the 'set' method to recompute 'fullname'.
+                    this.fullName = 'Moshe Blechenshtein';
+                }
+            },
+            computed: {
+                fullName: {
+                    get: function () {
+                        alert("Assembling full name...");
+                        return this.firstName + ' ' + this.lastName;
+                    },
+                    set: function (newName) {
+                        alert('Attempting to change name to: ' + newName)
+                        var part = newName.split(' ');
+                        this.firstName = part[0];
+                        this.lastName = part[1];
+                    }
+                }
+            }
+        });
 
-</script>
+    </script>
 </body>
 
 </html>
