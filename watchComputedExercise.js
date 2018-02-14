@@ -7,7 +7,6 @@ var app = new Vue({
             {name: 'How to build a shed', date: '2011'},
             {name: 'American Roadtrips', date: '2000'},
         ]
-
     }
 })
 
