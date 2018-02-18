@@ -1,34 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
+<style>
+    .red {
+        background-color: red;
+    }
+
+    .blue {
+        background-color: cornflowerblue;
+    }
+</style>
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 </head>
+
 <body>
+    .outer>#inner{I'm inside}>ul.hi[name="mr"]>.li[data-att="more-data"]*11>a[href="garbge"]>button{I'm Garbage}^^p*4.paragraph$
     <div id="app">
+        <h1 :class="{ red : toggleRed }" @click="toggleRedness">See what color I am!!!!!!!!!!!1</h1>
+        <button :disabled="{  true: amIDisabled }" @click="disableButton">Am I disabled?</button>
         <ul>
             <li v-for="name in names" v-text="name"></li>
         </ul>
         <input v-model="newName" type="text">
         <button @click="addName">Click to add name!</button>
+        <p :class="className" @click="toggleClass">Hello How are you?!</p>
+
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
-       <script>
-       new Vue({
-           el: '#app',
-           data: {
-               newName: '',
-               names: ['Yankel', 'Moishe', 'Sam'],
-           },
-           methods: {
-               addName() {
+    <script>
+        var myVue = new Vue({
+            el: '#app',
+            data: {
+                newName: '',
+                names: ['Yankel', 'Moishe', 'Sam'],
+                className: 'red',
+                amIDisabled: false,
+                toggleRed: false,
+            },
+            methods: {
+                addName() {
                     this.names.push(this.newName);
                     this.newName = '';
-            }
-           },
-       })
-    </script> 
+                },
+                toggleClass() {
+                    this.className === 'red' ? this.className = 'blue' : this.className = 'red';
+                },
+                toggleRedness() {
+                    this.toggleRed === true ? this.toggleRed = false : this.toggleRed = true;
+                },
+                disableButton(){
+                    amIDisabled === false ? amIDisabled = true : amIDisabled = false;
+                },
+            },
+        })
+    </script>
 </body>
+
 </html>
