@@ -21,13 +21,13 @@
     .outer>#inner{I'm inside}>ul.hi[name="mr"]>.li[data-att="more-data"]*11>a[href="garbge"]>button{I'm Garbage}^^p*4.paragraph$
     <div id="app">
         <h1 :class="{ red : toggleRed }" @click="toggleRedness">See what color I am!!!!!!!!!!!1</h1>
-        <button :disabled="{  true: amIDisabled }" @click="disableButton">Am I disabled?</button>
+        <p :class="className" @click="toggleClass">Hello How are you?!</p>
+        <button :disabled="amIDisabled === true" @click="disableButton">Am I disabled?</button>
         <ul>
             <li v-for="name in names" v-text="name"></li>
         </ul>
         <input v-model="newName" type="text">
         <button @click="addName">Click to add name!</button>
-        <p :class="className" @click="toggleClass">Hello How are you?!</p>
 
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
