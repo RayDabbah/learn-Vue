@@ -7,12 +7,24 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 </head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
 
 <body>
+    <div id="tabs">
+      
+        <br>
+        <br>
+    </div>
+    <div id="message">
+        <message-card cardtitle="This is the" body="How are you today????"></message-card>
+        <message-card cardtitle="This is the" body="How are you this afternoon???????!!!!!!!!!!!!!!!"></message-card>
+    </div>
     <div id="app">
-        <task-list>Farfel</task-list>
-        <task-list>Potatoes</task-list>
-        <task-list>Cookies</task-list>
+        <task-list></task-list>
+    </div>
+    <div id="modal">
+        <button @click="showModal = true">Show the most amazing modal!</button>
+        <modal v-show="showModal" @close="showModal = false" modal-content="A modal of amazing design!"></modal>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
 
