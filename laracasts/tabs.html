@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
+    <title>Vue With Tabs</title>
+</head>
+
+<body>
+
+    <div id="tabs">
+        <h1 v-if="clickedTab">You officially clicked the {{ tabName }} tab!<br></h1>
+        <tabs @selecting="tabAnnounce">
+            <tab :selected="true" name="About business">
+                <h1>
+                    About our Business!
+                </h1>
+            </tab>
+            <tab name="About we can">
+                <h1>
+                    About what we can do for you!
+                </h1>
+            </tab>
+            <tab name="About you can">
+                <h1>
+                    About what you can do for us!
+                </h1>
+            </tab>
+            <tab name="About everything">
+                <h1>
+                    About everything in the world!
+                </h1>
+            </tab>
+        </tabs>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
+    <script src="tabs.js"></script>
+</body>
+
+</html>
