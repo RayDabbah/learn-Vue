@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Components</title>
+</head>
+
+<body>
+    <div id="app">
+        <input type="text" v-model="otherStuff.name" placeholder="Please enter your name">
+        <input type="text" v-model="otherStuff.game" placeholder="Please enter your favorite sport">
+        <child message="hello world!" v-bind="otherStuff"></child>
+    </div>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script>
+        Vue.component('child', {
+            template: `
+            <div>
+            <p v-text="message"></p>
+            <p>{{name }} loves {{ game }}!</p>
+            <p>{{ superMessage }}</p>
+            </div>`,
+            props: ['message', 'name', 'game'],
+            data() {
+                return {
+                    superMessage: `You're really awesome!`,
+                }
+            },
+        })
+        var app = new Vue({
+            el: '#app',
+            data: {
+                otherStuff: {
+                    name: 'Yankel',
+                    game: 'baseball',
+                },
+            },
+        });
+    </script>
+</body>
+
+</html>
