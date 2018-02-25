@@ -1,0 +1,27 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,400,600');
+
+:root {
+    padding: 10px;
+    background-color: #aaaaaa54;
+    font-size: 2em;
+}
+#app {
+    background-color: #def;
+}
+a {
+    font-weight: 900;
+    padding: 1rem;
+    font-size: 1.1rem;
+    color: cornflowerblue;
+    text-decoration: none;
+    display: inline-block;
+    background-color: #aaaaaa54;
+}
+.is-active {
+    color: blueviolet;
+}
+.navbar-laravel {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+}
